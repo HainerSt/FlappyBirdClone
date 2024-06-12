@@ -1,8 +1,37 @@
-body{
-    font-family: 'Courier New', Courier, monospace;
-    text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#board{
-    background: url("./assets/flappybirdbg.png")
+html {
+  background: url("./assets//bglight.jpg");
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+}
+
+#board {
+  background: url("./assets/flappybggif.gif");
+  border: 3px solid #fff;
+  border-radius: 20px;
+}
+
+.game-description {
+  color: #fff;
+  background-color: #10d08c;
+  margin: 10px auto;
+  width: 360px;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
 }

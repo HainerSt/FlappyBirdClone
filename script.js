@@ -32,7 +32,7 @@ let bottomPipeImg;
 //physics
 let velocityX = -2; //pipe moving left speed
 let velocityY = 0; //bird jump speed
-let gravity = 0.4;
+let gravity = 0.35;
 
 //gameOver
 let gameOver = false;
@@ -53,7 +53,7 @@ window.onload = function () {
 
   //load bird image - pipe image
   fbImage = new Image();
-  fbImage.src = "./assets/bird-image.png";
+  fbImage.src = "./assets/pngegg.png";
   fbImage.onload = function () {
     //draw bird
     context.drawImage(fbImage, fb.x, fb.y, fb.width, fb.height);
