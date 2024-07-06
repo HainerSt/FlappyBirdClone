@@ -72,10 +72,10 @@ window.onload = function () {
 
   document.addEventListener("keydown", moveBird);
   document.addEventListener("click", moveBird);
-  
+
   setTimeout(() => {
     requestAnimationFrame(update);
-  }, 1500);
+  }, 2000);
 };
 
 function update() {
@@ -169,3 +169,5 @@ function moveBird(e) {
 function detectCollision(a, b) {
   return a.x < b.x + b.width && a.x + a.width > b.x && a.y < b.y + b.height && a.y + a.height > b.y;
 }
+
+

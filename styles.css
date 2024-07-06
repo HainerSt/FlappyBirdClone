@@ -11,6 +11,7 @@ html {
 body {
   font-family: "Courier New", Courier, monospace;
   text-align: center;
+  position: relative;
 }
 
 #board {
@@ -18,6 +19,7 @@ body {
   border: 3px solid #fff;
   border-radius: 20px;
   display: relative;
+  position: relative;
 }
 
 .game-description {
@@ -29,6 +31,9 @@ body {
 
 .game-info {
   color: #fff;
+  width: 50%;
+  margin: 0 auto;
+  line-height: 1.5;
 }
 
 .game-info .bordered {
@@ -54,4 +59,31 @@ body {
 #new-game-btn {
   display: absolute;
   left: 50px;
+}
+
+#countdown {
+  font-size: 2em;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  z-index: 5;
+
+  width: 100vw;
+  top: 30%;
+}
+
+@media (max-width: 800px) {
+  .game-info {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .game-info {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 0.9rem;
+  }
 }
