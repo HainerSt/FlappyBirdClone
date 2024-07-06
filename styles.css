@@ -17,6 +17,7 @@ body {
   background: url("./assets/flappybggif.gif");
   border: 3px solid #fff;
   border-radius: 20px;
+  display: relative;
 }
 
 .game-description {
@@ -24,6 +25,16 @@ body {
   background-color: #10d08c;
   margin: 10px auto;
   width: 360px;
+}
+
+.game-info {
+  color: #fff;
+}
+
+.game-info .bordered {
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 2px 4px;
 }
 
 .noselect {
@@ -34,4 +45,13 @@ body {
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Non-prefixed version, currently
                                     supported by Chrome, Edge, Opera and Firefox */
+}
+
+.hidden {
+  display: none;
+}
+
+#new-game-btn {
+  display: absolute;
+  left: 50px;
 }

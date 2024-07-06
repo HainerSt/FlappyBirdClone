@@ -3,6 +3,8 @@ let boardWidth = 360;
 let boardHeight = 640;
 let context;
 
+const newGameBtn = document.getElementById("new-game-btn");
+
 //bird 400/228 = 17/12 ratio
 //calculate ratio... 34/24 = 17/12
 let fbWidth = 34;
@@ -32,15 +34,16 @@ let bottomPipeImg;
 //physics
 let velocityX = -2; //pipe moving left speed
 let velocityY = 0; //bird jump speed
+
 let gravity = 0.35;
 
 //gameOver
 let gameOver = false;
-
 //score
 let score = 0;
 
 // canvas / window
+
 window.onload = function () {
   board = document.getElementById("board");
   board.height = boardHeight;
@@ -65,12 +68,14 @@ window.onload = function () {
   bottomPipeImg = new Image();
   bottomPipeImg.src = "./assets/bottom-pipe.png";
 
-  requestAnimationFrame(update);
-
   setInterval(placePipes, 1500); //1.5 sec
 
   document.addEventListener("keydown", moveBird);
   document.addEventListener("click", moveBird);
+  
+  setTimeout(() => {
+    requestAnimationFrame(update);
+  }, 1500);
 };
 
 function update() {
@@ -151,7 +156,6 @@ function placePipes() {
 function moveBird(e) {
   if (e.code == "Space" || e.code == "ArrowUp" || e.code == "KeyX" || e.type == "click") {
     velocityY = -6;
-
     //reset game
     if (gameOver) {
       fb.y = fbY;
